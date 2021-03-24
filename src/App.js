@@ -18,12 +18,18 @@ class App extends React.Component {
         console.log(error);
       });
   };
+
+
+
   render() {
     const { advice } = this.state;
     return (
       <div className="app">
         <div className="card">
           <h1 className="heading">{advice}</h1>
+          <button className="button" onClick={this.fetchAdvice}>
+            <span>Give me Advice!</span>
+          </button>
         </div>
       </div>
     );
